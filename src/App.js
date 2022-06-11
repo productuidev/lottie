@@ -21,8 +21,8 @@ class App extends React.Component {
         autoplay={true}
         loop={true}
         controls={true}
-        src="https://assets2.lottiefiles.com/private_files/lf30_crs0jiwe.json"
-        style={{ height: '200px', width: '200px' }}
+        src="https://assets8.lottiefiles.com/private_files/lf30_fup2uejx.json"
+        style={{ width: '300px' }}
       ></Player>
     );
   }

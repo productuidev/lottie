@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Player } from '@lottiefiles/react-lottie-player';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.player = React.createRef();
+  }
+
+  doSomething() {
+    this.player.current.play(); // make use of the player and call methods
+  }
+
+  render() {
+    return (
+      <Player
+        onEvent={event => {
+          if (event === 'load') this.doSomething(); // check event type and do something
+        }}
+        ref={this.player}
+        autoplay={true}
+        loop={true}
+        controls={true}
+        src="https://assets3.lottiefiles.com/packages/lf20_XZ3pkn.json"
+        style={{ height: '200px', width: '200px' }}
+      ></Player>
+    );
+  }
 }
 
 export default App;

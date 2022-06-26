@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #icon-container { width:200px; height:200px; }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+</head>
+<body>
+  <!-- https://css-tricks.com/animating-with-lottie/ -->
+  <!-- https://feel5ny.github.io/2018/02/25/interaction_01/ -->
+  <!-- https://useanimations.com/#explore -->
+  <div id="icon-container"></div>
+  <script>
+    var animation = bodymovin.loadAnimation({
+    // animationData: { /* ... */ },
+    container: document.getElementById('icon-container'), // required
+    path: 'https://maxst.icons8.com/vue-static/landings/animated-icons/icons/pause/pause.json', // required
+    renderer: 'svg', // required
+    loop: true, // optional
+    autoplay: true, // optional
+    name: "Demo Animation", // optional
+  });
+  </script>
+
+</body>
+</html>
